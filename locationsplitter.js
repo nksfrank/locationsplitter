@@ -74,17 +74,3 @@ var UrlBreaker = function() {
 		}
 	}
 }
-
-$(function() {
-	var ub = new UrlBreaker();
-	var hash = JSON.stringify(ub.GetHash(window.location.hash), null, 2);
-	var search = JSON.stringify(ub.GetSearch(window.location.search), null, 2);
-	var query = JSON.stringify(ub.GetQuery(window.location.search), null, 2);
-	var url = JSON.stringify(ub.GetLocation(window.location), null, 2);
-	console.log(hash);
-	console.log(search);
-	console.log(query);
-	console.log(url);
-	
-	$('#output').append(url);
-});
